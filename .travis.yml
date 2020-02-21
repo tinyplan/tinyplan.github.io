@@ -4,10 +4,10 @@ node_js: 10
 # 加快下次的访问速度
 cache: npm
 
-# 当名为hexo的分支有变化，就重新编译一次
+# 当名为develop的分支有变化，就重新编译一次
 branches:
   only:
-    - master
+    - develop
 
 before_install:
   - npm install -g hexo-cli
@@ -26,27 +26,27 @@ script:
   - hexo clean
   - hexo generate
 
-# after_script:
-#  - cd ./public
-#  - git init
-#  - git config user.name "tinyplan"
-#  - git config user.email "3405443386@qq.com"
-#  - git add .
-#  - git commit -m "Update docs"
-#  - git push --force --quiet "${Travis}@${GH_REF}" master:master
-#  - sed -i "s/Travis/${Travis}/g" ./_config.yml
-#  - hexo deploy
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "tinyplan"
+  - git config user.email "3405443386@qq.com"
+  - git add .
+  - git commit -m "Update docs"
+  - git push --force --quiet "${Travis}@${GH_REF}" master:master
+# - sed -i "s/Travis/${Travis}/g" ./_config.yml
+  - hexo deploy
 
 # 推送位置
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GH_TOKEN
-  keep-history: true
-  on:
-    branch: master
-  local-dir: public
-# - type: git
-# 下方的gh_token会被.travis.yml中sed命令替换
-#  repo: https://Travis@github.com:tinyplan/tinyplan.github.io.git
-#  branch: master
+#deploy:
+#  provider: pages
+#  skip-cleanup: true
+#  github-token: $GH_TOKEN
+#  keep-history: true
+#  on:
+#    branch: master
+# local-dir: public
+
+env:
+  global:
+    - GH_REF:github.com:tinyplan/tinyplan.github.io.git
