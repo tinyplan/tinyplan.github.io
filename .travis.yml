@@ -9,7 +9,7 @@ cache:
 # 当名为hexo的分支有变化，就重新编译一次
 branches:
   only:
-    - hexo
+    - master
 
 before_install:
   - npm install -g hexo-cli
