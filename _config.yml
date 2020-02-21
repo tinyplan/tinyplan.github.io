@@ -98,4 +98,6 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ''
+  - type: git
+    repo: https://Travis@github.com:tinyplan/tinyplan.github.io.git
+    branch: master
