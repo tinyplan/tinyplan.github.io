@@ -49,4 +49,4 @@ after_script:
 
 env:
   global:
-    - GH_REF:github.com:tinyplan/tinyplan.github.io.git
+    - GH_REF: github.com:tinyplan/tinyplan.github.io.git
