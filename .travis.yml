@@ -27,13 +27,13 @@ script:
   - hexo generate
 
 after_script:
-  - cd ./public
-  - git init
+#  - cd ./public
+#  - git init
   - git config user.name "tinyplan"
   - git config user.email "3405443386@qq.com"
-  - git add .
-  - git commit -m "Update docs"
-  - git push --force --quiet "${Travis}@${GH_REF}" master:master
+#  - git add .
+#  - git commit -m "Update docs"
+#  - git push --force --quiet "${Travis}@${GH_REF}" master:master
   - sed -i "s/Travis/${Travis}/g" ./_config.yml
   - hexo deploy
 
