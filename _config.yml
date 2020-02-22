@@ -104,6 +104,7 @@ deploy:
 # 备份
 backup:
   type: git
-  message: backup my blog of https://yourname.github.io/
+  message: backup my blog
   repository:
-    github: https://github.com/tinyplan/tinyplan.github.io.git,backup
+    github: https://github.com/tinyplan/tinyplan.github.io.git
+  branch: backup
