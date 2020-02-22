@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: tinyPlanの楽園
 subtitle: ''
-description: ''
+description: '从一个小计划开始'
 keywords:
 author: tinyPlan
-language: zh-CN
+language: zh-cn
 timezone: 'Asia/Shanghai'
 
 # URL
@@ -45,12 +45,10 @@ post_asset_folder: true
 relative_link: false
 future: true
 highlight:
-  enable: true
-  line_number: true
+  enable: false
+  line_number: false
   auto_detect: false
-  tab_replace: ''
-  wrap: true
-  hljs: false
+  tab_replace: 
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -93,11 +91,19 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: Sakura
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   - type: git
-    repo: https://Travis@github.com/tinyplan/tinyplan.github.io.git
+    repo: 
+      github: https://Travis@github.com/tinyplan/tinyplan.github.io.git
     branch: master
+
+# 备份
+backup:
+  type: git
+  message: backup my blog of https://yourname.github.io/
+  repository:
+    github: https://Travis@github.com/tinyplan/tinyplan.github.io.git,backup

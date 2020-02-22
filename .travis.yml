@@ -35,6 +35,7 @@ after_script:
 #  - git commit -m "Update docs"
 #  - git push --force --quiet "${Travis}@${GH_REF}" master:master
   - sed -i "s/Travis/${Travis}/g" ./_config.yml
+  - hexo b
   - hexo deploy
 
 # 推送位置
