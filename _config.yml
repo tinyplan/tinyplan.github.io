@@ -96,15 +96,7 @@ theme: Sakura
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  - type: git
-    repo: 
-      github: https://github.com/tinyplan/tinyplan.github.io.git
-    branch: master
-
-# 备份
-backup:
   type: git
-  message: backup my blog
-  repository:
+  repo: 
     github: https://github.com/tinyplan/tinyplan.github.io.git
-  branch: backup
+  branch: master
