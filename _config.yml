@@ -98,7 +98,7 @@ theme: Sakura
 deploy:
   - type: git
     repo: 
-      github: https://Travis@github.com/tinyplan/tinyplan.github.io.git
+      github: https://github.com/tinyplan/tinyplan.github.io.git
     branch: master
 
 # 备份
@@ -106,4 +106,4 @@ backup:
   type: git
   message: backup my blog of https://yourname.github.io/
   repository:
-    github: https://Travis@github.com/tinyplan/tinyplan.github.io.git,backup
+    github: https://github.com/tinyplan/tinyplan.github.io.git,backup
