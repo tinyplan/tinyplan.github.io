@@ -12,7 +12,7 @@
         <p><%= theme.description %></p>
         <div class="top-social_v2">
           <li id="bg-pre">
-            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/tinyplan/cdn@2.0/img/other/next-b.svg">
           </li>
           <% if (theme.social) {%>
             <% for (i in theme.social) {%>
@@ -35,23 +35,24 @@
             <% } %>
           <% } %>
           <li id="bg-next">
-            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+            <img src="https://cdn.jsdelivr.net/gh/tinyplan/cdn@2.0/img/other/next-b.svg">
           </li>
         </div>
       </div>
     </div>
   </figure>
-  <!-- 关闭视频播放功能 -->
-  <!-- <div id="video-container" style="">
+  <!-- 若注释整个div，会导致切换主题功能失效，原因待考究 -->
+  <div id="video-container" style="">
     <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
     </video>
-    <div id="video-btn" class="loadvideo videolive">
-    </div>
+    <!-- 关闭视频播放功能 -->
+    <!-- <div id="video-btn" class="loadvideo videolive">
+    </div> -->
     <div id="video-add">
     </div>
     <div class="video-stu">
-    </div>
-  </div> -->
+    </div>    
+  </div>
   <div class="headertop-down faa-float animated" onclick="headertop_down()">
     <span>
       <i class="fa fa-chevron-down" aria-hidden="true">

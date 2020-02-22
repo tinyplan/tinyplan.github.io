@@ -98,5 +98,5 @@ theme: Sakura
 deploy:
   type: git
   repo: 
-    github: https://github.com/tinyplan/tinyplan.github.io.git
+    github: git@github.com:tinyplan/tinyplan.github.io.git
   branch: master
