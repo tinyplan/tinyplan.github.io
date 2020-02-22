@@ -9,13 +9,13 @@ avatar: /img/custom/avatar.jpg
 url: https://tinyplan.github.io
 # 站点介绍
 description: 站点介绍
-cdn: https://cdn.jsdelivr.net/gh/tinyplan/cdn@1.8
+cdn: https://cdn.jsdelivr.net/gh/tinyplan/cdn@v2.0
 pjax: 1
 # 1开启
 mathjax: 0
 
 notice: 欢迎光临我的小站 ╰(*°▽°*)╯
-lazyloadImg: https://cdn.jsdelivr.net/gh/tinyplan/cdn@1.8/img/loader/orange.progress-bar-stripe-loader.svg
+lazyloadImg: https://cdn.jsdelivr.net/gh/tinyplan/cdn@v2.0/img/loader/orange.progress-bar-stripe-loader.svg
 
 menus:
   首页: { path: /, fa: fa-fort-awesome faa-shake }
@@ -51,14 +51,14 @@ homeArticleShown: 10
 # 轮播图 背景图片 更好的修改
 # 图片格式转换 8
 bg:
-  - https://cdn.jsdelivr.net/gh/tinyplan/cdn@1.8/img/cover/original/(1).jpg.webp
-  - https://cdn.jsdelivr.net/gh/tinyplan/cdn@1.8/img/cover/original/(2).jpg.webp
-  - https://cdn.jsdelivr.net/gh/tinyplan/cdn@1.8/img/cover/original/(3).jpg.webp
-  - https://cdn.jsdelivr.net/gh/tinyplan/cdn@1.8/img/cover/original/(4).jpg.webp
-  - https://cdn.jsdelivr.net/gh/tinyplan/cdn@1.8/img/cover/original/(5).jpg.webp
-  - https://cdn.jsdelivr.net/gh/tinyplan/cdn@1.8/img/cover/original/(6).jpg.webp
-  - https://cdn.jsdelivr.net/gh/tinyplan/cdn@1.8/img/cover/original/(7).jpg.webp
-  - https://cdn.jsdelivr.net/gh/tinyplan/cdn@1.8/img/cover/original/(8).jpg.webp
+  - https://cdn.jsdelivr.net/gh/tinyplan/cdn@v2.0/img/cover/original/(1).jpg.webp
+  - https://cdn.jsdelivr.net/gh/tinyplan/cdn@v2.0/img/cover/original/(2).jpg.webp
+  - https://cdn.jsdelivr.net/gh/tinyplan/cdn@v2.0/img/cover/original/(3).jpg.webp
+  - https://cdn.jsdelivr.net/gh/tinyplan/cdn@v2.0/img/cover/original/(4).jpg.webp
+  - https://cdn.jsdelivr.net/gh/tinyplan/cdn@v2.0/img/cover/original/(5).jpg.webp
+  - https://cdn.jsdelivr.net/gh/tinyplan/cdn@v2.0/img/cover/original/(6).jpg.webp
+  - https://cdn.jsdelivr.net/gh/tinyplan/cdn@v2.0/img/cover/original/(7).jpg.webp
+  - https://cdn.jsdelivr.net/gh/tinyplan/cdn@v2.0/img/cover/original/(8).jpg.webp
 
 # 背景图片样式 空 原图效果 filter-dim 阴影 filter-grid 横条 filter-dot 点点
 bgclass: 
@@ -67,7 +67,7 @@ bgclass:
 startdash: 
   - {url: /theme-sakura/, title: Sakura, desc: 本站 hexo 主题, img: /img/startdash/sakura.md.png}
   - {url: https://space.bilibili.com/342927027, title: Bilibili, desc: 博主的b站空间, img: /img/startdash/bilibili.jpg}
-  - {url: /, title: 园主的万事屋, desc: 技术服务, img: /img/startdash/wangshiwu.jpg}
+  - {url: /, title: 园主的万事屋(未施工), desc: 技术服务, img: /img/startdash/wangshiwu.jpg}
 
 
 
