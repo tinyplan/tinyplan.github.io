@@ -5,12 +5,11 @@ avatar: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/avatar.jpg
 authorLink: hojun.cn
 authorAbout: 一个好奇的人
 authorDesc: 一个好奇的人
-categories: 技术
+categories: tech
 date: 2018-12-12 22:16:01
 comments: true
 tags: 
- - web
- - 悦读
+ - 书单
 keywords: Sakura
 description: hexo-sakura主题使用教程
 photos: https://cdn.jsdelivr.net/gh/tinyplan/cdn@v1.8/img/startdash/sakura.md.png

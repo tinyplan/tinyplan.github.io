@@ -1,3 +1,5 @@
+# 引用别名 theme
+# 配置属性名时不要加'-',解析会有问题 (如xxx-xxx: xxx会解析失败)
 # site name
 prefixName: さくら荘その
 siteName: tinyplan
@@ -8,7 +10,7 @@ avatar: /img/custom/avatar.jpg
 # url为点击站点标题后跳转的地址
 url: https://tinyplan.github.io
 # 站点介绍
-description: 站点介绍
+description: 我的小站
 cdn: https://cdn.jsdelivr.net/gh/tinyplan/cdn@v2.0
 pjax: 1
 # 1开启
@@ -17,28 +19,32 @@ mathjax: 0
 notice: 欢迎光临我的小站 ╰(*°▽°*)╯
 lazyloadImg: https://cdn.jsdelivr.net/gh/tinyplan/cdn@v2.0/img/loader/orange.progress-bar-stripe-loader.svg
 
+# 默认的配置
+default_authorName: tinyplan
+default_authorAbout: 作者没有留下讯息哦！Σ( ° △ °|||)︴
+
 menus:
   首页: { path: /, fa: fa-fort-awesome faa-shake }
   归档: { path: /archives, fa: fa-archive faa-shake, submenus: { 
-    技术: {path: /categories/技术/, fa: fa-code }, 
-    生活: {path: /categories/生活/, fa: fa-file-text-o }, 
-    资源: {path: /categories/资源/, fa: fa-cloud-download }, 
-    随想: {path: /categories/随想/, fa: fa-commenting-o },
-    转载: {path: /categories/转载/, fa: fa-book }
+    技术: {path: /categories/tech/, fa: fa-code }, 
+    生活: {path: /categories/live/, fa: fa-file-text-o }, 
+    资源: {path: /categories/resource/, fa: fa-cloud-download }, 
+    随想: {path: /categories/whimsy/, fa: fa-commenting-o },
+    转载: {path: /categories/reprint/, fa: fa-book }
   } }
   清单: { path: javascript:;, fa: fa-list-ul faa-vertical, submenus: { 
-    书单: {path: /tags/悦读/, fa: fa-th-list faa-bounce }, 
+    书单: {path: /tags/书单/, fa: fa-th-list faa-bounce }, 
     番组: {path: /bangumi/, fa: fa-film faa-vertical }, 
     歌单: {path: /music/, fa: fa-headphones },
     图集: {path: /tags/图集/, fa: fa-photo }
   } }
 # 留言板: { path: /comment/, fa: fa-pencil-square-o faa-tada }
-# 友人帐: { path: /links/, fa: fa-link faa-shake }
+  友人帐: { path: /links/, fa: fa-link faa-shake }
 # 赞赏: { path: /donate/, fa: fa-heart faa-pulse }
-  关于: { path: /, fa: fa-leaf faa-wrench , submenus: { 
+  关于: { path: javascript:;, fa: fa-leaf faa-wrench , submenus: { 
     我？: {path: /about/, fa: fa-meetup}, 
     主题: {path: /theme-sakura/, fa: iconfont icon-sakura },
-    未来: {path: /lab/, fa: fa-cogs },
+    未来: {path: /future/, fa: fa-cogs },
   } }
 # 客户端: { path: /client/, fa: fa-android faa-vertical }
 # RSS: { path: /atom.xml, fa: fa-rss faa-pulse }
@@ -80,12 +86,12 @@ siteBuildingTime: 20/02/2019
 #########
 social:
   github: {url: http://github.com/tinyplan, img: /img/social/github.png}
-  sina: {url: /#, img: /img/social/sina.png}
-  wangyiyun: {url: /#, img: /img/social/wangyiyun.png}
+  qq: {url: /#, qrcode: /img/custom/wechat.jpg, img: /img/social/qq.png}
+  wechat: {url: /#, qrcode: /img/custom/wechat.jpg, img: /img/social/wechat.png}
+  netease: {url: /#, img: /img/social/netease.png}
   zhihu: {url: /#, img: /img/social/zhihu.png}
   email: {url: /#, img: /img/social/email.svg}
-  wechat: {url: /#, qrcode: /img/custom/wechat.jpg, img: /img/social/wechat.png}
-
+  
 #social  url, img 移动端配置
 msocial:
   github: {url: http://github.com/tinyplan, fa: fa-github, color: 333}
@@ -124,4 +130,3 @@ aplayer:
 valine: false
 v_appId: GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz
 v_appKey: mgOpfzbkHYqU92CV4IDlAUHQ
-

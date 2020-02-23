@@ -41,17 +41,17 @@ insight:
     untitled: '(无标题)'
 
 # category
-# 分类
-技术:
+# 分类，连接路径应对应
+tech:
     zh: 野生技术协会
     en: Geek – Only for Love
     img: https://cdn.jsdelivr.net/gh/tinyplan/cdn@1.8/img/banner/coding.jpg
-生活:
+live:
     zh: 生活
     en: live
     img: https://cdn.jsdelivr.net/gh/tinyplan/cdn@1.8/img/banner/writing.jpg
 
-# tag
+# tags
 # 标签
-悦读:
+书单:
     img: https://cdn.jsdelivr.net/gh/tinyplan/cdn@1.8/img/banner/reading.jpg

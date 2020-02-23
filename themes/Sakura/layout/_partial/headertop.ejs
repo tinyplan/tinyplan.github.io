@@ -1,3 +1,4 @@
+<!-- 背景、音乐播放器、主题切换 -->
 <div class="headertop <%- theme.bgclass %>">
   <div id="banner_wave_1"></div>
   <div id="banner_wave_2"></div>
@@ -14,9 +15,11 @@
           <li id="bg-pre">
             <img class="flipx" src="https://cdn.jsdelivr.net/gh/tinyplan/cdn@2.0/img/other/next-b.svg">
           </li>
+          <!-- 社交账号 -->
           <% if (theme.social) {%>
             <% for (i in theme.social) {%>
-              <% if (i == 'wechat') {%>
+              <% if (theme.social[i].qrcode) {%>
+                <!-- 如果有提供二维码 -->
                 <li class="wechat">
                   <a href="<%= theme.social[i].url%>">
                     <img src="<%- (theme.cdn || '') + theme.social[i].img%>">
@@ -25,13 +28,13 @@
                     <img src="<%- (theme.cdn || '') + theme.social[i].qrcode%>">
                   </div>
                 </li>
-              <% } else { %>
+              <% } else {%>
                 <li>
                   <a href="<%= theme.social[i].url%>" target="_blank" class="social-github" title="<%- i %>">
                     <img src="<%- (theme.cdn || '') + theme.social[i].img%>">
                   </a>
                 </li>
-              <% } %>
+              <% } %>   
             <% } %>
           <% } %>
           <li id="bg-next">

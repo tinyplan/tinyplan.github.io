@@ -1,10 +1,11 @@
+<!-- 普通文章模板 -->
 <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
 <% if (post.photos && post.photos.length){ %>
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(<%= post.photos[0] %>);" src="<%- theme.lazyloadImg%>" data-src="<%= post.photos[0] %>">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(<%= post.photos[0] %>)" src="<%- theme.lazyloadImg %>" data-src="<%= post.photos[0] %>">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
@@ -31,12 +32,11 @@
     <main id="main" class="site-main" role="main">
       <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
         <div class="toc"></div>
-        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        <!-- <div class="toc-entry-content"> --><!--套嵌目录使用（主要为了支援评论） -->
         <% if (!post.photos[0]){ %>
           <header class="entry-header">
             <h1 class="entry-title"><%- post.title %></h1>
             <p class="entry-census"><%- post.author %>&nbsp;·&nbsp;<%= date(post.date, 'YYYY-M-D') %>&nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p></p>
-
             <hr>
           </header>
         <% } %>
@@ -44,7 +44,8 @@
           <%- post.content %>
         </div>
         <!-- .entry-content -->
-        <div class="single-reward">
+        <!-- 暂时关闭‘赏’功能 -->
+        <!-- <div class="single-reward">
           <div class="reward-open">赏
             <div class="reward-main">
               <ul class="reward-row">
@@ -53,7 +54,7 @@
               </ul>
             </div>
           </div>
-        </div>
+        </div> -->
         <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
         <footer class="post-footer">
           <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
@@ -69,20 +70,25 @@
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         <% if (post.prev){ %>
+          <!-- 有上一篇文章 -->
           <% if (post.next) { %>
+            <!-- 如果有下一篇文章则只占一半 -->
             <div class="post-nepre half previous">
           <% } else { %>
+            <!-- 没有则占满 -->
             <div class="post-nepre full previous">
           <% } %>
+            <!-- 展示上一篇文章 -->
             <a href="<%- url_for(post.prev.path) %>" rel="prev">
               <div class="background">
-                <img class="lazyload" src="<%- theme.lazyloadImg%>" data-src="<%- post.prev.photos[0]%>" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="<%- post.prev.photos[0]%>">
+                <img class="lazyload" src="<%- theme.lazyloadImg %>" data-src="<%- post.prev.photos[0]%>" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="<%- post.prev.photos[0]%>">
               </div>
               <span class="label">
-              Previous Post</span>
+                Previous Post
+              </span>
               <div class="info">
                 <h3>
-                <%= post.prev.title%></h3>
+                <%= post.prev.title %></h3>
                 <hr>
               </div>
             </a>
@@ -96,7 +102,7 @@
           <% } %>
             <a href="<%- url_for(post.next.path) %>" rel="next">
               <div class="background">
-                <img class="lazyload" src="<%- theme.lazyloadImg%>" data-src="<%- post.next.photos[0]%>" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="<%- post.next.photos[0]%>">
+                <img class="lazyload" src="<%- theme.lazyloadImg %>" data-src="<%- post.next.photos[0]%>" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="<%- post.next.photos[0]%>">
               </div>
               <span class="label">
               Next Post</span>
@@ -112,16 +118,27 @@
       <%- partial('_partial/comment') %>
       <section class="author-profile">
         <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-          <a href="<%- post.authorLink %>" class="profile gravatar"><img src="<%- post.avatar%>" itemprop="image" alt="<%- post.author %>" height="70" width="70"></a>
+          <!-- 作者超链接 -->
+          <!-- 头像 -->
+          <a href="<%- post.authorLink %>" class="profile gravatar">
+            <img src="<%- post.avatar %>" itemprop="image" alt="<%- post.author %>" height="70" width="70">
+          </a>
           <div class="meta">
             <span class="title">Author</span>
             <h3 itemprop="name">
-            <a href="<%- post.authorLink%>" itemprop="url" rel="author"><%- post.author %></a>
+              <a href="<%- post.authorLink %>" itemprop="url" rel="author"><%- post.author %></a>
             </h3>
           </div>
         </div>
         <hr>
-        <p><i class="iconfont icon-write"></i><%- post.authorAbout%></p>
+        <p>
+          <i class="iconfont icon-write"></i>
+          <% if (post.authorAbout){ %> 
+            <%- post.authorAbout %>
+          <% } else { %>
+            <%- theme.default_authorAbout  %>
+          <% } %> 
+        </p>
       </section>
     </main><!-- #main -->
   </div><!-- #primary -->

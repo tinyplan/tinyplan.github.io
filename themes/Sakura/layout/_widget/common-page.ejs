@@ -15,7 +15,8 @@
       <%- post.content %>
       <!-- .entry-content -->
       <%- partial('_partial/comment') %>
-      <div class="single-reward">
+      <!-- 暂时关闭‘赏’功能 -->
+      <!-- <div class="single-reward">
         <div class="reward-open">赏
           <div class="reward-main">
             <ul class="reward-row">
@@ -24,7 +25,7 @@
             </ul>
           </div>
         </div>
-      </div>
+      </div> -->
       <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
       <footer class="post-footer">
         <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
@@ -43,7 +44,7 @@
           <div class="meta">
             <span class="title">Author</span>
             <h3 itemprop="name">
-            <a href="<%- theme.url%>" itemprop="url" rel="author"><%- theme.siteName %></a>
+            <a href="<%- theme.url %>" itemprop="url" rel="author"><%- theme.siteName %></a>
             </h3>
           </div>
         </div>
