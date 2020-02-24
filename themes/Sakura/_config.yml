@@ -10,7 +10,7 @@ avatar: /img/custom/avatar.jpg
 # url为点击站点标题后跳转的地址
 url: https://tinyplan.github.io
 # 站点介绍
-description: 我的小站
+description: 「 最是人间留不住 朱颜辞镜花辞树 」
 cdn: https://cdn.jsdelivr.net/gh/tinyplan/cdn@v2.0
 pjax: 1
 # 1开启
@@ -37,6 +37,9 @@ menus:
     番组: {path: /bangumi/, fa: fa-film faa-vertical }, 
     歌单: {path: /music/, fa: fa-headphones },
     图集: {path: /tags/图集/, fa: fa-photo }
+  } }
+  专栏: { path: /categories/tech/, fa: fa-code faa-shake, submenus: {
+    
   } }
 # 留言板: { path: /comment/, fa: fa-pencil-square-o faa-tada }
   友人帐: { path: /links/, fa: fa-link faa-shake }

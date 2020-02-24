@@ -3,6 +3,7 @@ title: Linux修改root密码(CentOS7适用)
 date: 2020-02-21 21:22:14
 keywords: Linux
 categories: tech
+description: 自己踩过的坑
 ---
 
 <!-- more -->

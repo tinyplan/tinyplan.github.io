@@ -54,4 +54,10 @@ live:
 # tags
 # 标签
 书单:
+    zh: 生活
+    en: live
+    img: https://cdn.jsdelivr.net/gh/tinyplan/cdn@1.8/img/banner/reading.jpg
+Nginx:
+    zh: 生活
+    en: live
     img: https://cdn.jsdelivr.net/gh/tinyplan/cdn@1.8/img/banner/reading.jpg

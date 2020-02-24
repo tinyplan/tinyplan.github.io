@@ -1421,7 +1421,7 @@ a:hover,a:active {
     margin:15px 0 0 10px;
     font-size:16px;
     position:relative;
-    left:-50%;
+    left:-40%;
     pointer-events:auto !important
 }
 #show-nav.mobile-fit {
@@ -1552,7 +1552,7 @@ a:hover,a:active {
     padding:10px;
     top:46px;
     right:-13px;
-    width:80px;
+    width:100px;
     text-align:center;
     z-index:9999;
     border-radius:5px;
@@ -3825,12 +3825,12 @@ li.feature-2 {
 .notice {
     padding:20px;
     border:1px dashed #e6e6e6;
+    border-radius:10px;
     color:#969696;
     position:relative;
     display:inline-block;
     width:100%;
-    background:#fbfbfb50;
-    border-radius:10px
+    background:#fbfbfb50
 }
 .notice i {
     float:left;
@@ -3841,6 +3841,9 @@ li.feature-2 {
 .notice-content {
     display:initial;
     vertical-align:middle
+}
+.notice-content marquee {
+    display: -webkit-flex
 }
 .headertop {
     position:relative;

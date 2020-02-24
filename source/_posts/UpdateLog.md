@@ -10,7 +10,7 @@ authorAbout:
 authorDesc:
 tags:
 keywords: 博客 日志
-description:
+description: 建设实录
 photos:
 ---
 ### 2020.2.22
@@ -18,6 +18,7 @@ photos:
 
     - 增加樱花飘动的效果；
     - 增加首页右下角切换主题的功能
+    - 关闭首页视频播放功能
 
 2.代办
 
@@ -36,3 +37,8 @@ photos:
 
     - 添加二维码
     - 重新发布图床版本
+
+### 2020.2.24
+1.修改
+
+    - 将公告内容从静态改为滚动
