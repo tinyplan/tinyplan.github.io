@@ -16,7 +16,7 @@ pjax: 1
 # 1开启
 mathjax: 0
 
-notice: 欢迎光临我的小站 ╰(*°▽°*)╯
+notice: 欢迎光临我的小站 ╰(*°▽°*)╯ 小站还在建设中哦！ヽ(*。>Д<)o゜
 lazyloadImg: https://cdn.jsdelivr.net/gh/tinyplan/cdn@v2.0/img/loader/orange.progress-bar-stripe-loader.svg
 
 # 默认的配置
@@ -33,21 +33,22 @@ menus:
     转载: {path: /categories/reprint/, fa: fa-book }
   } }
   清单: { path: javascript:;, fa: fa-list-ul faa-vertical, submenus: { 
-    书单: {path: /tags/书单/, fa: fa-th-list faa-bounce }, 
-    番组: {path: /bangumi/, fa: fa-film faa-vertical }, 
+    书单: {path: /tags/bookList/, fa: fa-th-list }, 
+    番组: {path: /bangumi/, fa: fa-film }, 
     歌单: {path: /music/, fa: fa-headphones },
     图集: {path: /tags/图集/, fa: fa-photo }
   } }
   专栏: { path: /categories/tech/, fa: fa-code faa-shake, submenus: {
-    
+    Nginx: {path: /tags/nginx, fa: fa-html5},
+    Linux: {path: /tags/linux, fa: fa-linux}
   } }
 # 留言板: { path: /comment/, fa: fa-pencil-square-o faa-tada }
   友人帐: { path: /links/, fa: fa-link faa-shake }
 # 赞赏: { path: /donate/, fa: fa-heart faa-pulse }
   关于: { path: javascript:;, fa: fa-leaf faa-wrench , submenus: { 
     我？: {path: /about/, fa: fa-meetup}, 
-    主题: {path: /theme-sakura/, fa: iconfont icon-sakura },
-    未来: {path: /future/, fa: fa-cogs },
+    主题: {path: /theme-sakura/, fa: iconfont icon-sakura fa-spin},
+    未来: {path: /future/, fa: fa-cog fa-spin},
   } }
 # 客户端: { path: /client/, fa: fa-android faa-vertical }
 # RSS: { path: /atom.xml, fa: fa-rss faa-pulse }

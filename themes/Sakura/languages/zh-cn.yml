@@ -53,11 +53,15 @@ live:
 
 # tags
 # 标签
-书单:
-    zh: 生活
-    en: live
+bookList:
+    zh: 书单
+    en: 在读书籍
     img: https://cdn.jsdelivr.net/gh/tinyplan/cdn@1.8/img/banner/reading.jpg
-Nginx:
-    zh: 生活
-    en: live
+nginx:
+    zh: Nginx
+    en: Nginx学习之路
+    img: https://cdn.jsdelivr.net/gh/tinyplan/cdn@1.8/img/banner/reading.jpg
+linux:
+    zh: Linux
+    en: Linux采坑实录
     img: https://cdn.jsdelivr.net/gh/tinyplan/cdn@1.8/img/banner/reading.jpg

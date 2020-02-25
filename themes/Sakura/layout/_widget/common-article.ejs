@@ -4,8 +4,12 @@
 <div class="pattern-center-blank"></div>
 <% if (post.photos && post.photos.length){ %>
   <div class="pattern-center single-center">
+    <!-- 背景图 -->
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(<%= post.photos[0] %>)" src="<%- theme.lazyloadImg %>" data-src="<%= post.photos[0] %>">
+    <div class="pattern-attachment-img lazyload"
+        style="background-image: url(<%= post.photos[0] %>)"
+        src="<%- theme.lazyloadImg %>"
+        data-src="<%= post.photos[0] %>">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
@@ -13,11 +17,22 @@
       <p class="entry-census">
         <span>
           <a href="<%- post.authorLink%>">
-            <img src="<%- post.avatar%>">
+            <!-- 文章没有定义作者图像则使用博客的作者 -->
+            <% if (post.avatar) {%> 
+              <img src="<%- post.avatar%>">
+            <% } else { %>
+              <img src="<%- (theme.cdn || '') + theme.avatar%>">
+            <% } %>  
           </a>
         </span>
         <span>
-          <a href="<%- post.authorLink%>"><%- post.author %></a>
+          <a href="<%- post.authorLink%>">
+            <% if (post.author) {%> 
+              <%- post.author %>
+            <% } else { %>
+              <%- theme.default_authorName %>
+            <% } %>  
+          </a>
         </span>
         <span class="bull">
         ·</span>

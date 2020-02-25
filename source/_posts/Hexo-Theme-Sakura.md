@@ -9,7 +9,7 @@ categories: tech
 date: 2018-12-12 22:16:01
 comments: true
 tags: 
- - 书单
+ - bookList
 keywords: Sakura
 description: hexo-sakura主题使用教程
 photos: https://cdn.jsdelivr.net/gh/tinyplan/cdn@v1.8/img/startdash/sakura.md.png
