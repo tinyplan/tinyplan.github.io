@@ -57,6 +57,10 @@ bookList:
     zh: 书单
     en: 在读书籍
     img: https://cdn.jsdelivr.net/gh/tinyplan/cdn@1.8/img/banner/reading.jpg
+java:
+    zh: Java
+    en: 我的主修语言
+    img: https://cdn.jsdelivr.net/gh/tinyplan/cdn@1.8/img/banner/reading.jpg
 nginx:
     zh: Nginx
     en: Nginx学习之路

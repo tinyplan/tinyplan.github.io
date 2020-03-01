@@ -39,6 +39,7 @@ menus:
     图集: {path: /tags/图集/, fa: fa-photo }
   } }
   专栏: { path: /categories/tech/, fa: fa-code faa-shake, submenus: {
+    Java: {path: /tags/java, fa: fa-coffee},
     Nginx: {path: /tags/nginx, fa: fa-html5},
     Linux: {path: /tags/linux, fa: fa-linux}
   } }
@@ -134,3 +135,6 @@ aplayer:
 valine: false
 v_appId: GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz
 v_appKey: mgOpfzbkHYqU92CV4IDlAUHQ
+
+plugins:
+  - hexo-footnotes
