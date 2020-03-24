@@ -67,5 +67,5 @@ nginx:
     img: https://cdn.jsdelivr.net/gh/tinyplan/cdn@1.8/img/banner/reading.jpg
 linux:
     zh: Linux
-    en: Linux采坑实录
+    en: Linux踩坑实录
     img: https://cdn.jsdelivr.net/gh/tinyplan/cdn@1.8/img/banner/reading.jpg

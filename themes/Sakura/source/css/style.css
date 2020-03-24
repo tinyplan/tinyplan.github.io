@@ -1608,7 +1608,7 @@ a:hover,a:active {
 }
 .site-content {
     max-width:800px;
-    padding:0 20px;
+    padding:0 10px;
     margin-left:auto;
     margin-right:auto;
     background-color:rgba(255,255,255,.8)
