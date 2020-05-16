@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>tinyPlanの楽園</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://tinyplan.github.io/"/>
+  <updated>2020-05-16T10:39:14.464Z</updated>
+  <id>https://tinyplan.github.io/</id>
+  
+  <author>
+    <name>tinyPlan</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://tinyplan.github.io/2020/05/16/hello-world/"/>
+    <id>https://tinyplan.github.io/2020/05/16/hello-world/</id>
+    <published>2020-05-16T10:39:14.464Z</published>
+    <updated>2020-05-16T10:39:14.464Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;</code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+      <category term="live" scheme="https://tinyplan.github.io/categories/live/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>工厂模式与抽象工厂模式</title>
+    <link href="https://tinyplan.github.io/2020/03/01/FactoryPattern/"/>
+    <id>https://tinyplan.github.io/2020/03/01/FactoryPattern/</id>
+    <published>2020-03-01T14:10:09.000Z</published>
+    <updated>2020-05-16T10:39:14.464Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h2><h3 id="1-1-为什么使用工厂模式"><a href="#1-1-为什么使用工厂模式" class="headerlink" title="1-1. 为什么使用工厂模式"></a>1-1. 为什么使用工厂模式</h3><blockquote><p>&emsp;&emsp;工厂模式是创建对象的最佳方式；其本质是通过工厂提供的方法来<code>替代原来的用new创建对象</code>的操作，从而隐藏创建对象的过程.</p></blockquote><ol><li><code>解耦</code> ：把对象的创建和使用的过程分开</li><li><code>降低代码重复</code>: 如果创建某个对象的过程都很复杂，需要一定的代码量，而且很多地方都要用到，那么就会有很多的重复代码。</li><li><code>降低维护成本</code> ：由于创建过程都由工厂统一管理，所以发生业务逻辑变化，不需要找到所有需要创建某个对象的地方去逐个修正，只需要在工厂里修改即可，降低维护成本。</li></ol><h3 id="1-2-分类"><a href="#1-2-分类" class="headerlink" title="1-2. 分类"></a>1-2. 分类</h3><p>&emsp;&emsp;工厂模式又分为以下三种：</p><ul><li><code>简单工厂模式</code>，又称静态工厂模式；</li><li><code>工厂方法模式</code>，又称多态性工厂模式或虚拟构造子模式；</li><li><code>抽象工厂模式</code>，又称工具箱模式(Kit/ToolKit)</li></ul><h2 id="2-正文"><a href="#2-正文" class="headerlink" title="2. 正文"></a>2. 正文</h2><h3 id="2-1-简单工厂模式"><a href="#2-1-简单工厂模式" class="headerlink" title="2-1. 简单工厂模式"></a>2-1. 简单工厂模式</h3><h4 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h4><blockquote><p>&emsp;&emsp;严格来说，简单工厂模式并不是一种设计模式，更像是一种编程习惯.</p><footer><strong>《Head First设计模式》P117</strong></footer></blockquote><p>&emsp;&emsp;简单工厂模式只能算是工厂模式的一种特殊实现，简单工厂模式在实际的应用中使用较少，因为它只适用于多数简单的使用场景。<br>&emsp;&emsp;最严重的是简单工厂模式违背了6大原则中的<code>开闭原则</code>，因为每次添加一个对象进入工厂，都需要去修改switch-case或者if-else等诸如此类的分支语句，添加分支选项。</p><h4 id="2-适用场景"><a href="#2-适用场景" class="headerlink" title="2. 适用场景"></a>2. 适用场景</h4><ol><li>需要创建的对象较少；</li><li>客户端不关心对象的创建过程。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      工厂模式学习
+    
+    </summary>
+    
+      <category term="tech" scheme="https://tinyplan.github.io/categories/tech/"/>
+    
+    
+      <category term="java" scheme="https://tinyplan.github.io/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GOF设计模式</title>
+    <link href="https://tinyplan.github.io/2020/02/29/DesignPattern/"/>
+    <id>https://tinyplan.github.io/2020/02/29/DesignPattern/</id>
+    <published>2020-02-29T12:51:49.000Z</published>
+    <updated>2020-05-16T10:39:14.464Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="学习原因"><a href="#学习原因" class="headerlink" title="学习原因"></a>学习原因</h2><ol><li>一切都要从那只蝙蝠说起</li><li>实在闲的没事干(菜的借口)</li></ol><h2 id="正片开始"><a href="#正片开始" class="headerlink" title="正片开始"></a>正片开始</h2><h3 id="1-GOF简介"><a href="#1-GOF简介" class="headerlink" title="1. GOF简介"></a>1. GOF简介</h3><p>&emsp;&emsp;<code>设计模式</code>（Design pattern）代表了最佳的实践，通常被有经验的面向对象的软件开发人员所采用。<br>&emsp;&emsp;<code>设计模式</code>是软件开发人员在软件开发过程中面临的一般问题的解决方案。这些解决方案是众多软件开发人员经过相当长的一段时间的试验和错误总结出来的。<br>&emsp;&emsp;在 1994 年，由 Erich Gamma、Richard Helm、Ralph Johnson 和 John Vlissides 四人合著出版了一本名为《Design Patterns - Elements of Reusable Object-Oriented Software》<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>的书，该书首次提到了软件开发中<code>设计模式</code>的概念。</p><p>&emsp;<code>设计模式</code>主要基于以下两项面向对象原则：</p><ol><li>对接口编程而不是对实现编程</li><li>优先使用对象组合而不是继承</li></ol><h3 id="2-分类概览"><a href="#2-分类概览" class="headerlink" title="2. 分类概览"></a>2. 分类概览</h3><p>设计模式大致分为3类：</p><ul><li>创建型模式（Creational Patterns）</li><li>结构型模式（Structural Patterns）</li><li>行为型模式（Behavioral Patterns）</li></ul><p>还有一类名为J2EE 设计模式。</p><table><thead><tr><th align="center">类名</th><th align="left">描述</th><th align="left">包括</th></tr></thead><tbody><tr><td align="center">创建型模式</td><td align="left">1. 提供了一种在创建对象的同时隐藏创建逻辑的方式，而不是使用 new 运算符直接实例化对象。<br>2. 这使得程序在判断针对某个给定实例需要创建哪些对象时更加灵活。</td><td align="left">- 工厂模式<br>- 抽象工厂模式<br>- 单例模式<br>- 建造者模式<br>- 原型模式</td></tr><tr><td align="center">结构型模式</td><td align="left">1. 关注类和对象的组合<br>2. 继承的概念则被用来组合接口和定义组合对象获得新功能的方式。</td><td align="left">- 适配器模式<br>- 桥接模式<br>- 过滤器模式<br>- 组合模式<br>- 装饰器模式<br>- 外观模式<br>- 享元模式<br>- 代理模式</td></tr><tr><td align="center">行为型模式</td><td align="left">1. 设计模式特别关注对象之间的通信</td><td align="left">- 责任链模式<br>- 命令模式<br>- 解释器模式<br>- 迭代器模式<br>- 中介者模式<br>- 备忘录模式<br>- 观察者模式<br>- 状态模式<br>- 空对象模式<br>- 策略模式<br>- 模板模式<br>- 访问者模式<br></td></tr><tr><td align="center">J2EE 模式</td><td align="left">1. 特别关注表示层<br>2. 由 Sun Java Center 鉴定</td><td align="left">- MVC 模式<br>- 业务代表模式<br>- 组合实体模式<br>- 数据访问对象模式<br>- 前端控制器模式<br>- 拦截过滤器模式<br>- 服务定位器模式<br>- 传输对象模式<br></td></tr></tbody></table><h3 id="3-设计模式6大原则"><a href="#3-设计模式6大原则" class="headerlink" title="3. 设计模式6大原则"></a>3. 设计模式6大原则</h3><h4 id="1-开闭原则"><a href="#1-开闭原则" class="headerlink" title="1. 开闭原则"></a>1. 开闭原则</h4><ul><li>意思：对扩展开放，对修改关闭。即在程序需要进行拓展的时候，不能去修改原有的代码，实现一个<code>热插拔</code>的效果。</li><li>作用：为了使程序的扩展性好，易于维护和升级。</li><li>方法：想要达到这样的效果，我们需要使用<code>接口</code>和<code>抽象类</code>。</li></ul><h4 id="2-里氏代换原则"><a href="#2-里氏代换原则" class="headerlink" title="2. 里氏代换原则"></a>2. 里氏代换原则</h4><ul><li>里氏代换原则是<code>面向对象设计的基本原则之一</code></li><li>里氏代换原则中说，任何基类可以出现的地方，子类一定可以出现</li><li>LSP 是继承复用的基石。只有当派生类可以替换掉基类，且软件单位的功能不受到影响时，基类才能真正被复用，而派生类也能够在基类的基础上增加新的行为。</li><li>里氏代换原则是对开闭原则的补充。</li><li>实现开闭原则的关键步骤就是<code>抽象化</code>，而基类与子类的继承关系就是抽象化的具体实现</li><li>里氏代换原则是对实现抽象化的具体步骤的规范。</li></ul><h4 id="3-依赖倒转原则"><a href="#3-依赖倒转原则" class="headerlink" title="3. 依赖倒转原则"></a>3. 依赖倒转原则</h4><ul><li>这个原则是开闭原则的基础</li><li>具体内容：针对<code>接口</code>编程，依赖于抽象而不依赖于具体。</li></ul><h4 id="4-接口隔离原则"><a href="#4-接口隔离原则" class="headerlink" title="4. 接口隔离原则"></a>4. 接口隔离原则</h4><ul><li>意思：使用多个隔离的接口，比使用单个接口要好。它还有另外一个意思是：降低类之间的耦合度。</li><li>由此可见，其实设计模式就是从大型软件架构出发、便于升级和维护的软件设计思想，它强调<code>降低依赖，降低耦合</code>。</li></ul><h4 id="5-迪米特法则"><a href="#5-迪米特法则" class="headerlink" title="5. 迪米特法则"></a>5. 迪米特法则</h4><ul><li>又称最少知道原则</li><li>意思：一个实体应当尽量少地与其他实体之间发生相互作用，使得系统功能模块相对独立。(直白说就是，与关系最近的类发生关系)</li></ul><h4 id="6-合成复用原则"><a href="#6-合成复用原则" class="headerlink" title="6. 合成复用原则"></a>6. 合成复用原则</h4><ul><li>意思：尽量使用<code>合成/聚合</code>的方式，而不是使用继承。</li></ul><h3 id="4-具体学习"><a href="#4-具体学习" class="headerlink" title="4. 具体学习"></a>4. 具体学习</h3><h4 id="创建型模式"><a href="#创建型模式" class="headerlink" title="创建型模式"></a>创建型模式</h4><ol><li>工厂模式 <a href="/2020/03/01/FactoryPattern/" title="传送门">传送门</a></li></ol><h4 id="结构型模式"><a href="#结构型模式" class="headerlink" title="结构型模式"></a>结构型模式</h4><h4 id="行为型模式"><a href="#行为型模式" class="headerlink" title="行为型模式"></a>行为型模式</h4><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">译名：设计模式-可复用的面向对象软件元素</span><a href="#fnref:1" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
+    
+    <summary type="html">
+    
+      Java设计模式GOF学习
+    
+    </summary>
+    
+      <category term="tech" scheme="https://tinyplan.github.io/categories/tech/"/>
+    
+    
+      <category term="java" scheme="https://tinyplan.github.io/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>个人图床搭建</title>
+    <link href="https://tinyplan.github.io/2020/02/26/CreatePicSource/"/>
+    <id>https://tinyplan.github.io/2020/02/26/CreatePicSource/</id>
+    <published>2020-02-26T05:04:37.000Z</published>
+    <updated>2020-05-16T10:39:14.464Z</updated>
+    
+    <content type="html"><![CDATA[<p>(由于Chevereto-Free尚不支持php3.0，此篇文章未完成)</p><h3 id="1-环境说明"><a href="#1-环境说明" class="headerlink" title="1. 环境说明"></a>1. 环境说明</h3><pre><code>Linux: CentOS 7(CentOS Linux release 7.7.1908)Nginx: 1.16.1Mysql: 8.0.19PHP: 7.3.13当然，也可以安装整合包，安装lnmp的全部内容</code></pre><h3 id="2-环境配置"><a href="#2-环境配置" class="headerlink" title="2.环境配置"></a>2.环境配置</h3><h4 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h4><ol><li>安装Linux的过程不做赘述</li></ol><h4 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h4><ol><li><p>在联网环境下，使用<code>yum</code>命令安装Nginx的依赖环境</p><pre><code class="shell"> yum -y install make zlib zlib-devel gcc-c++ libtool openssl openssl-devel</code></pre></li><li><p>将Nginx的安装包上传到服务器任意目录(此处为<code>/opt/myopt</code>下)，解压并重命名(按<code>tab</code>文件名自动补全)</p><pre><code class="shell"> tar -zxvf nginx-1.16.1.tar.gz mv nginx-1.16.1 nginx</code></pre></li><li><p>进入解压后的目录，执行<code>./configure</code></p><pre><code class="shell"> cd nginx ./configure</code></pre></li><li><p>编译并安装Nginx</p><pre><code class="shell"> make &amp;&amp; make install</code></pre></li><li><p>访问ip，测试是否访问成功；若访问失败，请跳到第6步</p></li><li><p>首先检查网络连接。<br>若无问题，则可能是系统防火墙的80端口未开启；<br>若是云服务器，去安全组配置中配置允许访问80端口。</p></li><li><p>设置开机自启</p><pre><code class="shell"> cd /lib/systemd/system vim nginx.service</code></pre><pre><code class="nginx.service"> [Unit] Description=nginx  After=network.target  [Service]  Type=forking  ExecStart=/usr/local/nginx/sbin/nginx ExecReload=/usr/local/nginx/sbin/nginx reload ExecStop=/usr/local/nginx/sbin/nginx quit PrivateTmp=true  [Install]  WantedBy=multi-user.target</code></pre><pre><code class="shell"> systemctl enable nginx.service</code></pre></li></ol><h4 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h4><ol><li><p>上传安装包，解压；<br>重名解压后的文件；<br>将文件移动到<code>/usr/local</code>目录下</p><pre><code class="shell"> tar -xvf mysql-8.0.19-linux-glibc2.12-x86_64.tar.xz mv mysql-8.0.19-linux-glibc2.12-x86_64.tar.xz mysql8 mv mysql8 /usr/local</code></pre></li><li><p>进入<code>/usr/local/mysql8</code>,创建数据存放的目录</p><pre><code class="shell"> cd /usr/local/mysql8 mkdir data</code></pre></li><li><p>创建用户及用户组</p><pre><code class="shell"> //添加名为mysql的用户组 groupadd mysql //创建名为mysql的用户并将其添加到mysql的用户组中 useradd -g mysql mysql</code></pre></li><li><p>为<code>mysql8</code>文件及其子文件的拥有者改为<code>mysql</code></p><pre><code class="shell"> chown -R mysql.mysql /usr/local/mysql8</code></pre></li><li><p>进入<code>/usr/local/mysql8</code>,并执行初始化命令，并记住密码(如图)</p><pre><code class="shell"> ./mysqld --initialize --user=mysql  --lower_case_table_names=1 --datadir=/usr/local/mysql8/data --basedir=/usr/local/mysql8</code></pre><img src="/.io//02/26/CreatePicSource/mysql-passwd.png" class title="mysql初始化"></li><li><p>修改/etc/my.cnf文件</p><pre><code class="shell"> vim /etc/my.cnf</code></pre><pre><code class="my.cnf"> [mysqld] datadir=/usr/local/mysql/data port = 3306 sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES symbolic-links=0 max_connections=400 innodb_file_per_table=1 #表名大小写不明感，敏感为 lower_case_table_names=1</code></pre></li><li><p>添加软连接</p><pre><code class="shell"> ln -s /usr/local/mysql8/support-files/mysql.server /etc/init.d/mysql  ln -s /usr/local/mysql8/bin/mysql /usr/bin/mysql service mysql restart</code></pre></li><li><p>使用初始密码登录mysql，并修改密码</p><pre><code class="shell"> //注意：此步输入密码是不会显示 mysql -u root -p //mysql8的password函数失效，因此使用以下命令 ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;yourpassword&#39;;</code></pre></li><li><p>开启远程连接</p><pre><code class="shell"> use mysql; update user set user.Host=&#39;%&#39; where user.User=&#39;root&#39;; flush privileges;</code></pre></li><li><p>设置开机自启</p><pre><code class="shell">cp /usr/local/mysql8/support-files/mysql.server /etc/init.d/mysqld//赋予可执行权限chmod +x /etc/init.d/mysqld//先停止服务systemctl stop mysqld//设置开机自启systemctl enable mysqld//再次开启systemctl start mysqld</code></pre></li></ol><h4 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h4><p>yum -y install libxml2 libxml2-devel openssl openssl-devel bzip2 bzip2-devel libcurl libcurl-devel libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel gmp gmp-devel libmcrypt libmcrypt-devel readline readline-devel libxslt libxslt-devel</p><p>./configure –prefix=/usr/local/php –with-config-file-path=/etc –enable-fpm –with-fpm-user=www –with-fpm-group=www –enable-inline-optimization –disable-debug –disable-rpath –enable-shared –enable-soap –with-libxml-dir –with-xmlrpc –with-openssl –with-mhash –with-pcre-regex –with-sqlite3 –with-zlib –enable-bcmath –with-iconv –with-bz2 –enable-calendar –with-curl –with-cdb –enable-dom –enable-exif –enable-fileinfo –enable-filter –with-pcre-dir –enable-ftp –with-gd –with-openssl-dir –with-jpeg-dir –with-png-dir –with-zlib-dir –with-freetype-dir  –enable-gd-jis-conv –with-gettext –with-gmp –with-mhash –enable-json –enable-mbstring –enable-mbregex –enable-mbregex-backtrack –with-onig –enable-pdo –with-mysqli=mysqlnd –with-pdo-mysql=mysqlnd –with-zlib-dir –with-pdo-sqlite –with-readline –enable-session –enable-shmop –enable-simplexml –enable-sockets –enable-sysvmsg –enable-sysvsem –enable-sysvshm –enable-wddx –with-libxml-dir –with-xsl –enable-zip –enable-mysqlnd-compression-support –with-pear –enable-opcache –disable-fileinfo</p><p>wget  <a href="https://nih.at/libzip/libzip-1.2.0.tar.gz" target="_blank" rel="noopener">https://nih.at/libzip/libzip-1.2.0.tar.gz</a></p><p>echo ‘/usr/local/lib64<br>/usr/local/lib<br>/usr/lib<br>/usr/lib64’&gt;&gt;/etc/ld.so.conf</p>]]></content>
+    
+    <summary type="html">
+    
+      基于Chevereto的图床搭建
+    
+    </summary>
+    
+      <category term="tech" scheme="https://tinyplan.github.io/categories/tech/"/>
+    
+    
+      <category term="linux" scheme="https://tinyplan.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于Nginx的问题汇总</title>
+    <link href="https://tinyplan.github.io/2020/02/24/ProblemOfNginx/"/>
+    <id>https://tinyplan.github.io/2020/02/24/ProblemOfNginx/</id>
+    <published>2020-02-24T11:19:40.000Z</published>
+    <updated>2020-05-16T10:39:14.464Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><h4 id="1-Linux下安装Nginx"><a href="#1-Linux下安装Nginx" class="headerlink" title="1. Linux下安装Nginx"></a>1. Linux下安装Nginx</h4><p>传送门</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;常见问题&quot;&gt;&lt;a href=&quot;#常见问题&quot; class=&quot;headerlink&quot; title=&quot;常见问题&quot;&gt;&lt;/a&gt;常见问题&lt;/h3&gt;&lt;h4 id=&quot;1-Linux下安装Nginx&quot;&gt;&lt;a href=&quot;#1-Linux下安装Nginx&quot; class=&quot;header
+      
+    
+    </summary>
+    
+      <category term="tech" scheme="https://tinyplan.github.io/categories/tech/"/>
+    
+    
+      <category term="linux" scheme="https://tinyplan.github.io/tags/linux/"/>
+    
+      <category term="nginx" scheme="https://tinyplan.github.io/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客更新日志</title>
+    <link href="https://tinyplan.github.io/2020/02/23/UpdateLog/"/>
+    <id>https://tinyplan.github.io/2020/02/23/UpdateLog/</id>
+    <published>2020-02-23T12:43:15.000Z</published>
+    <updated>2020-05-16T10:39:14.464Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="未来企划"><a href="#未来企划" class="headerlink" title="未来企划"></a>未来企划</h2><ol><li>live2d(优先度不高)</li><li>评论功能(暂不开放)</li><li>文章权限控制(hexo-blog-encrypt) <a href="https://leehoward.cn/2019/10/26/hexo%E5%AF%B9%E6%96%87%E7%AB%A0%E8%BF%9B%E8%A1%8C%E5%8A%A0%E5%AF%86/" title="[external] [title]" target>文章加密</a></li></ol><h3 id="2020-2-22"><a href="#2020-2-22" class="headerlink" title="2020.2.22"></a>2020.2.22</h3><p>1.修改</p><ul><li>增加樱花飘动的效果；</li><li>增加首页右下角切换主题的功能</li><li>关闭首页视频播放功能</li></ul><p>2.代办</p><ul><li>无</li></ul><h3 id="2020-2-23"><a href="#2020-2-23" class="headerlink" title="2020.2.23"></a>2020.2.23</h3><p>1.修改</p><ul><li>对模板做了一些小的修改并且添加部分注释；</li><li>修改社交栏:</li><li>重写社交栏模板的部分代码，更好地适配有无二维码的情况</li><li>删除了sina账号链接</li><li>修改网易云的图片路径以及变量名(尚未发布到cdn路径)</li></ul><p>2.代办</p><ul><li>添加二维码</li><li>重新发布图床版本</li></ul><h3 id="2020-2-24"><a href="#2020-2-24" class="headerlink" title="2020.2.24"></a>2020.2.24</h3><p>1.修改</p><ul><li>将公告内容从静态改为滚动</li></ul><h3 id="2020-2-25"><a href="#2020-2-25" class="headerlink" title="2020.2.25"></a>2020.2.25</h3><p>1.修改</p><ul><li>增加了一些默认值</li><li>发布到github</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      建设实录
+    
+    </summary>
+    
+      <category term="tech" scheme="https://tinyplan.github.io/categories/tech/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux修改root密码(CentOS7适用)</title>
+    <link href="https://tinyplan.github.io/2020/02/21/ChangeRootPwd/"/>
+    <id>https://tinyplan.github.io/2020/02/21/ChangeRootPwd/</id>
+    <published>2020-02-21T13:22:14.000Z</published>
+    <updated>2020-05-16T10:39:14.464Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><h3 id="一、思路："><a href="#一、思路：" class="headerlink" title="一、思路："></a>一、思路：</h3><pre><code>1.进入救援模式，root用户进入此模式不需要密码2.通过修改密码来登入系统</code></pre><h3 id="二、实践："><a href="#二、实践：" class="headerlink" title="二、实践："></a>二、实践：</h3><ol><li>在以下界面时，按 <code>e</code> 进入内核编辑</li></ol><img src="/.io//02/21/ChangeRootPwd/enterCoreEdit.png" class title="进入内核编辑"><ol start="2"><li>进入后，按方向键，找到UTF-8字样；在…UTF-8后加一个空格，再插入<code>rd.break</code>，按 <code>ctrl + x</code> 执行</li></ol><img src="/.io//02/21/ChangeRootPwd/2.png" class title="内核编辑"><ol start="3"><li>若系统是以中文语言安装的，请先输入<code>LANG=en</code>避免乱码</li><li>依次输入以下指令</li></ol><pre><code class="shell">mount -o remount,rw /sysrootchroot /sysrootpasswd roottouch /.autorelabelexitreboot</code></pre><p>Tips:<br>    1.在输入密码时，密码不会显示<br>    2.输入密码时，不要使用小键盘，不要使用小键盘，不要使用小键盘(重要的事说三遍)</p><img src="/.io//02/21/ChangeRootPwd/shell.png" class title="shell命令输入结果演示"><ol start="5"><li>等待重启，输入新的密码</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      自己踩过的坑
+    
+    </summary>
+    
+      <category term="tech" scheme="https://tinyplan.github.io/categories/tech/"/>
+    
+    
+      <category term="linux" scheme="https://tinyplan.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo-Theme-Sakura</title>
+    <link href="https://tinyplan.github.io/2018/12/12/Hexo-Theme-Sakura/"/>
+    <id>https://tinyplan.github.io/2018/12/12/Hexo-Theme-Sakura/</id>
+    <published>2018-12-12T14:16:01.000Z</published>
+    <updated>2020-05-16T10:39:14.464Z</updated>
+    
+    <content type="html"><![CDATA[<p>hexo-theme-sakura主题 <a href="https://github.com/honjun/hexo-theme-sakura/blob/master/README.md" target="_blank" rel="noopener">English document</a></p><p>基于WordPress主题<a href="https://github.com/mashirozx/Sakura/" target="_blank" rel="noopener">Sakura</a>修改成Hexo的主题。</p><p><a href="https://sakura.hojun.cn" target="_blank" rel="noopener">demo预览</a></p><p>正在开发中……</p><p><img src="https://wx3.sinaimg.cn/large/006bYVyvly1g069tuf42oj312w0m8ndq.jpg" alt></p><h2 id="交流群"><a href="#交流群" class="headerlink" title="交流群"></a>交流群</h2><p>若你是使用者，加群QQ: 801511924</p><p>若你是创作者，加群QQ: 194472590</p><h2 id="主题特性"><a href="#主题特性" class="headerlink" title="主题特性"></a>主题特性</h2><ul><li>首页大屏视频</li><li>首页随机封面</li><li>图片懒加载</li><li>valine评论</li><li>fancy-box相册</li><li>pjax支持，音乐不间断</li><li>aplayer音乐播放器</li><li>多级导航菜单（按现在大部分hexo主题来说，这也算是个特性了）</li></ul><h2 id="赞赏作者"><a href="#赞赏作者" class="headerlink" title="赞赏作者"></a>赞赏作者</h2><p>如果喜欢hexo-theme-sakura主题，可以考虑资助一下哦~非常感激！</p><p><a href="https://www.paypal.me/hojuncn" target="_blank" rel="noopener">paypal</a> | <a href="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/AliPayQR.jpg" target="_blank" rel="noopener">Alipay 支付宝</a> | <a href="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg" target="_blank" rel="noopener">WeChat Pay 微信支付</a></p><h2 id="未完善的使用教程"><a href="#未完善的使用教程" class="headerlink" title="未完善的使用教程"></a>未完善的使用教程</h2><p>那啥？老实说我目前也不是很有条理233333333~</p><h2 id="1、主题下载安装"><a href="#1、主题下载安装" class="headerlink" title="1、主题下载安装"></a>1、主题下载安装</h2><p><a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" rel="noopener">hexo-theme-sakura</a>建议下载压缩包格式，因为除了主题内容还有些source的配置对新手来说比较太麻烦，直接下载解压就省去这些麻烦咯。</p><p>下载好后解压到博客根目录（不是主题目录哦，重复的选择替换）。接着在命令行（cmd、bash）运行<code>npm i</code>安装依赖。</p><h2 id="2、主题配置"><a href="#2、主题配置" class="headerlink" title="2、主题配置"></a>2、主题配置</h2><h3 id="博客根目录下的-config配置"><a href="#博客根目录下的-config配置" class="headerlink" title="博客根目录下的_config配置"></a>博客根目录下的_config配置</h3><p>站点</p><pre><code class="yml"># Sitetitle: 你的站点名subtitle:description: 站点简介keywords:author: 作者名language: zh-cntimezone:</code></pre><p>部署</p><pre><code class="yml">deploy:  type: git  repo:     github: 你的github仓库地址    # coding: 你的coding仓库地址  branch: master</code></pre><p>备份 （使用hexo b发布备份到远程仓库）</p><pre><code class="yml">backup:  type: git  message: backup my blog of https://honjun.github.io/  repository:    # 你的github仓库地址,备份分支名  （建议新建backup分支）    github: https://github.com/honjun/honjun.github.io.git,backup    # coding: https://git.coding.net/hojun/hojun.git,backup</code></pre><h3 id="主题目录下的-config配置"><a href="#主题目录下的-config配置" class="headerlink" title="主题目录下的_config配置"></a>主题目录下的_config配置</h3><p>其中标明【改】的是需要修改部门，标明【选】是可改可不改，标明【非】是不用改的部分</p><pre><code class="yml"># site name# 站点名 【改】prefixName: さくら荘そのsiteName: hojun# favicon and site master avatar# 站点的favicon和头像 输入图片路径（下面的配置是都是cdn的相对路径，没有cdn请填写完整路径，建议使用jsdeliver搭建一个cdn啦，先去下载我的cdn替换下图片就行了，简单方便~）【改】favicon: /images/favicon.icoavatar: /img/custom/avatar.jpg# 站点url 【改】url: https://sakura.hojun.cn# 站点介绍（或者说是个人签名）【改】description: Live your life with passion! With some drive!# 站点cdn，没有就为空 【改】  若是cdn为空，一些图片地址就要填完整地址了，比如之前avatar就要填https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/avatar.jpgcdn: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6# 开启pjax 【选】pjax: 1# 站点首页的公告信息 【改】notice: hexo-Sakura主题已经开源，目前正在开发中...# 懒加载的加载中图片 【选】lazyloadImg: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg# 站点菜单配置 【选】menus:  首页: { path: /, fa: fa-fort-awesome faa-shake }  归档: { path: /archives, fa: fa-archive faa-shake, submenus: {     技术: {path: /categories/技术/, fa: fa-code },     生活: {path: /categories/生活/, fa: fa-file-text-o },     资源: {path: /categories/资源/, fa: fa-cloud-download },     随想: {path: /categories/随想/, fa: fa-commenting-o },    转载: {path: /categories/转载/, fa: fa-book }  } }  清单: { path: javascript:;, fa: fa-list-ul faa-vertical, submenus: {     书单: {path: /tags/悦读/, fa: fa-th-list faa-bounce },     番组: {path: /bangumi/, fa: fa-film faa-vertical },     歌单: {path: /music/, fa: fa-headphones },    图集: {path: /tags/图集/, fa: fa-photo }  } }  留言板: { path: /comment/, fa: fa-pencil-square-o faa-tada }  友人帐: { path: /links/, fa: fa-link faa-shake }  赞赏: { path: /donate/, fa: fa-heart faa-pulse }  关于: { path: /, fa: fa-leaf faa-wrench , submenus: {     我？: {path: /about/, fa: fa-meetup},     主题: {path: /theme-sakura/, fa: iconfont icon-sakura },    Lab: {path: /lab/, fa: fa-cogs },  } }  客户端: { path: /client/, fa: fa-android faa-vertical }  RSS: { path: /atom.xml, fa: fa-rss faa-pulse }# Home page sort type: -1: newer first，1: older first. 【非】homePageSortType: -1# Home page article shown number) 【非】homeArticleShown: 10# 背景图片 【选】bgn: 8# startdash面板 url, title, desc img 【改】startdash:   - {url: /theme-sakura/, title: Sakura, desc: 本站 hexo 主题, img: /img/startdash/sakura.md.png}  - {url: http://space.bilibili.com/271849279, title: Bilibili, desc: 博主的b站视频, img: /img/startdash/bilibili.jpg}  - {url: /, title: hojun的万事屋, desc: 技术服务, img: /img/startdash/wangshiwu.jpg}# your site build time or founded date# 你的站点建立日期 【改】siteBuildingTime: 07/17/2018# 社交按钮(social)  url, img PC端配置 【改】social:  github: {url: http://github.com/honjun, img: /img/social/github.png}  sina: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/sina.png}  wangyiyun: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/wangyiyun.png}  zhihu: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/zhihu.png}  email: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/email.svg}  wechat: {url: /#, qrcode: /img/custom/wechat.jpg, img: /img/social/wechat.png}# 社交按钮(msocial)  url, img 移动端配置 【改】msocial:  github: {url: http://github.com/honjun, fa: fa-github, color: 333}  weibo: {url: http://weibo.com/mashirozx?is_all=1, fa: fa-weibo, color: dd4b39}  qq: {url: https://wpa.qq.com/msgrd?v=3&amp;uin=954655431&amp;site=qq&amp;menu=yes, fa: fa-qq, color: 25c6fe}# 赞赏二维码（其中wechatSQ是赞赏单页面的赞赏码图片）【改】donate:  alipay: /img/custom/donate/AliPayQR.jpg  wechat: /img/custom/donate/WeChanQR.jpg  wechatSQ: /img/custom/donate/WeChanSQ.jpg# 首页视频地址为https://cdn.jsdelivr.net/gh/honjun/hojun@1.2/Unbroken.mp4，配置如下 【改】movies:  url: https://cdn.jsdelivr.net/gh/honjun/hojun@1.2  # 多个视频用逗号隔开，随机获取。支持的格式目前已知MP4,Flv。其他的可以试下，不保证有用  name: Unbroken.mp4# 左下角aplayer播放器配置 主要改id和server这两项，修改详见[aplayer文档] 【改】aplayer:   id: 2660651585  server: netease  type: playlist  fixed: true  mini: false  autoplay: false  loop: all  order: random  preload: auto  volume: 0.7  mutex: true# Valine评论配置【改】valine: truev_appId: GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHszv_appKey: mgOpfzbkHYqU92CV4IDlAUHQ</code></pre><h2 id="分类页和标签页配置"><a href="#分类页和标签页配置" class="headerlink" title="分类页和标签页配置"></a>分类页和标签页配置</h2><h3 id="分类页"><a href="#分类页" class="headerlink" title="分类页"></a>分类页</h3><p><img src="https://ws3.sinaimg.cn/large/006bYVyvly1g07b0gucy9j31060jih76.jpg" alt></p><h3 id="标签页"><a href="#标签页" class="headerlink" title="标签页"></a>标签页</h3><p><img src="https://wx2.sinaimg.cn/large/006bYVyvly1g07azb2399j31040jgazs.jpg" alt></p><p>配置项在\themes\Sakura\languages\zh-cn.yml里。新增一个分类或标签最好加下哦，当然嫌麻烦可以直接使用一张默认图片（可以改主题或者直接把404图片替换下，征求下意见要不要给这个在配置文件中加个开关，可以issue或群里提出来），现在是没设置的话会使用那种倒立小狗404哦。</p><pre><code class="yml">#category# 按分类名创建技术:    #中文标题    zh: 野生技术协会     # 英文标题    en: Geek – Only for Love    # 封面图片    img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/banner/coding.jpg生活:    zh: 生活    en: live    img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/banner/writing.jpg#tag# 标签名即是标题悦读:    # 封面图片    img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/banner/reading.jpg</code></pre><h2 id="单页面封面配置"><a href="#单页面封面配置" class="headerlink" title="单页面封面配置"></a>单页面封面配置</h2><p><img src="https://ws3.sinaimg.cn/large/006bYVyvly1g07b1pi619j31080jge4u.jpg" alt><br>如留言板页面页面，位于source下的comment下，打开index.md如下：</p><pre><code class="md">---title: commentdate: 2018-12-20 23:13:48keywords: 留言板description: comments: true# 在这里配置单页面头部图片，自定义替换哦~photos: https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/comment.jpg---</code></pre><h2 id="单页面配置"><a href="#单页面配置" class="headerlink" title="单页面配置"></a>单页面配置</h2><h3 id="番组计划页-（请直接在下载后的文件中改，下面的添加了注释可能会有些影响）"><a href="#番组计划页-（请直接在下载后的文件中改，下面的添加了注释可能会有些影响）" class="headerlink" title="番组计划页 （请直接在下载后的文件中改，下面的添加了注释可能会有些影响）"></a>番组计划页 （请直接在下载后的文件中改，下面的添加了注释可能会有些影响）</h3><p><img src="https://wx2.sinaimg.cn/large/006bYVyvly1g07b2gyx60j31090jjahj.jpg" alt></p><pre><code class="yml">---layout: bangumititle: bangumicomments: falsedate: 2019-02-10 21:32:48keywords:description:bangumis:  # 番组图片  - img: https://lain.bgm.tv/pic/cover/l/0e/1e/218971_2y351.jpg  # 番组名    title: 朝花夕誓——于离别之朝束起约定之花  # 追番状态 （追番ing/已追完）    status: 已追完  # 追番进度    progress: 100  # 番剧日文名称    jp: さよならの朝に約束の花をかざろう  # 放送时间    time: 放送时间: 2018-02-24 SUN.  # 番剧介绍    desc:  住在远离尘嚣的土地，一边将每天的事情编织成名为希比欧的布，一边静静生活的伊欧夫人民。在15岁左右外表就停止成长，拥有数百年寿命的他们，被称为“离别的一族”，并被视为活着的传说。没有双亲的伊欧夫少女玛奇亚，过着被伙伴包围的平稳日子，却总感觉“孤身一人”。他们的这种日常，一瞬间就崩溃消失。追求伊欧夫的长寿之血，梅萨蒂军乘坐着名为雷纳特的古代兽发动了进攻。在绝望与混乱之中，伊欧夫的第一美女蕾莉亚被梅萨蒂带走，而玛奇亚暗恋的少年克里姆也失踪了。玛奇亚虽然总算逃脱了，却失去了伙伴和归去之地……。  - img: https://lain.bgm.tv/pic/cover/l/0e/1e/218971_2y351.jpg    title: 朝花夕誓——于离别之朝束起约定之花    status: 已追完    progress: 50    jp: さよならの朝に約束の花をかざろう    time: 放送时间: 2018-02-24 SUN.    desc: 住在远离尘嚣的土地，一边将每天的事情编织成名为希比欧的布，一边静静生活的伊欧夫人民。在15岁左右外表就停止成长，拥有数百年寿命的他们，被称为“离别的一族”，并被视为活着的传说。没有双亲的伊欧夫少女玛奇亚，过着被伙伴包围的平稳日子，却总感觉“孤身一人”。他们的这种日常，一瞬间就崩溃消失。追求伊欧夫的长寿之血，梅萨蒂军乘坐着名为雷纳特的古代兽发动了进攻。在绝望与混乱之中，伊欧夫的第一美女蕾莉亚被梅萨蒂带走，而玛奇亚暗恋的少年克里姆也失踪了。玛奇亚虽然总算逃脱了，却失去了伙伴和归去之地……。---</code></pre><h3 id="友链页-（请直接在下载后的文件中改，下面的添加了注释可能会有些影响）"><a href="#友链页-（请直接在下载后的文件中改，下面的添加了注释可能会有些影响）" class="headerlink" title="友链页 （请直接在下载后的文件中改，下面的添加了注释可能会有些影响）"></a>友链页 （请直接在下载后的文件中改，下面的添加了注释可能会有些影响）</h3><p><img src="https://ws3.sinaimg.cn/large/006bYVyvly1g07b39tleej31080jhjv1.jpg" alt></p><pre><code class="yml">---layout: linkstitle: links# 创建日期，可以改下date: 2018-12-19 23:11:06 # 图片上的标题，自定义修改keywords: 友人帐 description: # true/false 开启/关闭评论comments: true # 页面头部图片，自定义修改photos: https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/links.jpg # 友链配置links:   # 类型分组  - group: 个人项目    # 类型简介    desc: 充分说明这家伙是条咸鱼 &lt; (￣︶￣)&gt;    items:    # 友链链接    - url: https://shino.cc/fgvf    # 友链头像      img: https://cloud.moezx.cc/Picture/svg/landscape/fields.svg    # 友链站点名      name: Google    # 友链介绍  下面雷同      desc: Google 镜像    - url: https://shino.cc/fgvf      img: https://cloud.moezx.cc/Picture/svg/landscape/fields.svg      name: Google      desc: Google 镜像  # 类型分组...  - group: 小伙伴们    desc: 欢迎交换友链 ꉂ(ˊᗜˋ)    items:    - url: https://shino.cc/fgvf      img: https://cloud.moezx.cc/Picture/svg/landscape/fields.svg      name: Google      desc: Google 镜像    - url: https://shino.cc/fgvf      img: https://cloud.moezx.cc/Picture/svg/landscape/fields.svg      name: Google      desc: Google 镜像---</code></pre><h2 id="写文章配置"><a href="#写文章配置" class="headerlink" title="写文章配置"></a>写文章配置</h2><p>主题集成了个人插件hexo-tag-bili和hexo-tag-fancybox_img。其中hexo-tag-bili用来在文章或单页面中插入B站外链视频，使用语法如下：</p><pre><code class="md">{% bili video_id [page] %}</code></pre><p>详细使用教程详见<a href="https://github.com/honjun/hexo-tag-bili/blob/master/README-zh_cn.md" target="_blank" rel="noopener">hexo-tag-bili</a>。</p><p>hexo-tag-fancybox_img用来在文章或单页面中图片，使用语法如下：</p><pre><code class="md">{% fb_img src [caption] %}</code></pre><p>详细使用教程详见<a href="https://github.com/honjun/hexo-tag-fancybox_img/blob/master/README-zh_cn.md" target="_blank" rel="noopener">hexo-tag-fancybox_img</a></p><h2 id="还有啥，一时想不起来……"><a href="#还有啥，一时想不起来……" class="headerlink" title="还有啥，一时想不起来……"></a>还有啥，一时想不起来……</h2><p>To be continued…</p>]]></content>
+    
+    <summary type="html">
+    
+      hexo-sakura主题使用教程
+    
+    </summary>
+    
+      <category term="tech" scheme="https://tinyplan.github.io/categories/tech/"/>
+    
+    
+      <category term="bookList" scheme="https://tinyplan.github.io/tags/bookList/"/>
+    
+  </entry>
+  
+</feed>
